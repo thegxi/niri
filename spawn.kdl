@@ -1,0 +1,13 @@
+spawn-at-startup "swww-daemon"
+spawn-sh-at-startup "sleep 0.5 && swww img $HOME/Pictures/wallpapers/default.png"
+spawn-at-startup "waybar"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "mako"
+spawn-at-startup "fcitx5"
+// spawn-at-startup "niriswitcher"
+spawn-sh-at-startup "clipse --listen"
+spawn-sh-at-startup "~/.config/niri/scripts/swayidle.sh"
+//spawn-sh-at-startup "~/.config/niri/scripts/edit-screenshot.sh"
+
+// 设置截图保存的路径，null将会禁止保存到磁盘
+screenshot-path "$HOME/Pictures/screenshots/%Y-%m-%d %H-%M-%S.png"

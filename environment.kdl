@@ -1,0 +1,5 @@
+environment {
+  XMODIFIERS "@im=fcitx"
+  STARSHIP_CONFIG "/home/xi/.config/fish/starship.toml"
+  STARSHIP_CACHE "/home/xi/.cache/starship"
+}

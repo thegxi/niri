@@ -1,0 +1,8 @@
+include "animations.kdl"
+include "environment.kdl"
+include "input.kdl"
+include "keybindings.kdl"
+include "layout.kdl"
+include "outputs.kdl"
+include "rule.kdl"
+include "spawn.kdl"
