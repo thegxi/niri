@@ -101,6 +101,7 @@ binds {
   Mod+Alt+W   hotkey-overlay-title="Open waypaper" {spawn "waypaper";}
   Mod+F2      hotkey-overlay-title="Waybar" {spawn "pkill waybar && waybar";}
   Mod+RETURN  hotkey-overlay-title="Open terminal" repeat=false { spawn "kitty"; }
+  Mod+Shift+RETURN  hotkey-overlay-title="Open float terminal" repeat=false { spawn-sh "kitty --app-id \"custom-kitty\""; }
   Mod+Z       hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel" "toggle"; }
 
   Mod+Shift+Slash hotkey-overlay-title="Display hotkey" { show-hotkey-overlay; }
