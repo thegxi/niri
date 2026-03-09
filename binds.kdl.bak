@@ -1,13 +1,16 @@
 binds {
-  // 音量控制 allow-when-locked=true 在锁屏时的按键也会生效。这里的wpctl是wireplumber包中附带的
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  // 显示快捷键教程
+  Mod+Shift+Slash hotkey-overlay-title="快捷键教程 Keybind tutorial" { show-hotkey-overlay; }
 
-   // 亮度控制。brightnessctl 有独立的包
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+  // 音量控制 allow-when-locked=true 在锁屏时的按键也会生效。这里的wpctl是wireplumber包中附带的
+  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+  // 亮度控制。brightnessctl 有独立的包
+  XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
   // 窗口焦点切换，位置移动
   Mod+Left    hotkey-overlay-title="往左移动焦点" { focus-column-left; }
@@ -104,7 +107,6 @@ binds {
   Mod+Shift+RETURN  hotkey-overlay-title="Open float terminal" repeat=false { spawn-sh "kitty --app-id \"custom-kitty\""; }
   Mod+Z       hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel" "toggle"; }
 
-  Mod+Shift+Slash hotkey-overlay-title="Display hotkey" { show-hotkey-overlay; }
   Mod+Shift+Q     hotkey-overlay-title="Exit niri" { quit; }
   Mod+Shift+P     hotkey-overlay-title="Close monitor" { power-off-monitors; }
   Mod+Alt+Tab     repeat=false { toggle-overview; }
